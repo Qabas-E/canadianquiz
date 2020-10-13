@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#4fc4ff;
+}
+
+#lightbox{
+	position:fixed;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	background-color:rgba(0, 0, 0, 0.92);
+
+}
+#message{
+	width:80%;
+	padding:20px;
+	background-color:#f5ab56;
+	color:white;
+	text-align:center;
+	font-size:4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #4fc4ff;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+      'header header header header' 
+      'left left left left' 
+      'right right right right' 
+      'footer1 footer1 footer1 footer1'
+	  'footer2 footer2 footer2 footer2';
+      grid-template-columns: repeat(4, 25%);
+}
+  
+ h2{
+	 color:blue;
+ }
+ 
+ #score{
+	 font-size:24px;
+	 color:white;
+	 font-weight:bold
+ }
+
+.left,
+.right,
+.header,
+.footer1, footer2 {
+  
+  display:grid;
+  justify-items:center;  
+  align-items:center;  
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  background-color: #f24535;
+  border:2px;
+  border-right:0px;
+  border-color:#f24535;
+  border-radius:7px;
+}
+
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  padding:24px;
+  background-color: #f24535;
+  border:2px;
+  border-left:0px;
+  border-color:#f24535;
+  border-radius:7px;
+}
+
+/* Style the footer */
+.footer1 {
+  grid-area: footer1;
+  background-color: #4fc4ff;
+  width:160px;
+  height:60px;
+  margin-left:230px;
+  text-align: center;
+  border: solid;
+  border-color:#00a6e3;
+  border-radius:7px;
+}
+.footer3 {
+  grid-area: footer1;
+  background-color: #4fc4ff;
+  width:160px;
+  height:60px;
+  margin-left:390px;
+  text-align: center;
+  border: solid;
+  border-color:#00a6e3;
+  border-radius:7px;
+}
+
+
+.footer2 {
+  grid-area: footer2;
+  background-color: #4fc4ff;
+  padding: 10px;
+  text-align: center;
+  border:3px;
+  border-color:#008bd1;
+  border-radius:7px;
+}
+
+
+#question {
+  font-size: 1em;
+  font-weight:bold;
+}
+
+hr{
+	background-color:white;
+}
+
+.options {
+   font-size:1.5em;
+   padding:0.4em;
+   border: solid 1px;
+   border-color:#ed8072;
+   border-radius: 5px;
+}
+
+.options:hover{
+	  background-color: #f54e4e;
+}
+
+.footer1:hover{
+	background-color:#7ee4ed;
+}
+
+.footer3:hover{
+	background-color:#7ee4ed;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (min-width: 600px) {
+ .grid-container  {
+  grid-template-areas: 
+    'header header header header' 
+    'left left right right' 
+    'footer1 footer3 footer2 footer2';
+  
+}
+}
